@@ -4,7 +4,7 @@
 		<meta charset = "koi-8r">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!--<link rel="stylesheet" href="css/style.css" media="all" type="text/css">-->
-		<!--<script type="text/javascript" src="js/crypta.js"></script>-->
+		<script type="text/javascript" src="js/crypta.js"></script>
 		<title>Crypta</title>
 	</head>
 	<body>
@@ -20,8 +20,8 @@
 								type="number" 
 								class="form-control" 
 								id="shift" 
-								placeholder="3" 
-								min=1 
+								placeholder="0" 
+								min=0
 								max=32/>
 						</div>
 						<div class="form-group">
@@ -29,14 +29,20 @@
 							<textarea id="text" class="form-control" rows="6"></textarea>
 						</div>
 						<div class="form-group">
-							<button type="button" class="btn btn-default">Зашифровать</button>
+							<button 
+								type="button" 
+								class="btn btn-default"
+								onclick="EncryptText()">Зашифровать</button>
 						</div>
 						<div class="form-group">
 							<label for="encrypted">Зашифрованный текст</label>
 							<textarea id="encrypted" class="form-control" rows="6"></textarea>
 						</div>
 						<div class="form-group">
-							<button type="button" class="btn btn-default">Расшифровать</button>
+							<button 
+								type="button" 
+								class="btn btn-default"
+								onclick="DecryptText()">Расшифровать</button>
 						</div>
 					</div>
 					<div class="col-md-3"></div>
